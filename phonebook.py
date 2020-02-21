@@ -1,7 +1,8 @@
 class PhoneBook():
-    def __init__(self):
+    def __init__(self,filename="phonebook.txt"):
         self.numbers = {}
-
+        self.filename = filename
+        self.cache = open(self.filename,"w")
     def add(self, name, number):
         self.numbers[name] = number
 
